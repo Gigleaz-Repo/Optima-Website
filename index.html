@@ -149,55 +149,46 @@ referrerpolicy="no-referrer"
     <div class="right-hero">
       <div class="scrollable-div">
         <div>
-          <p id="para_0" class="special-paragraph ">
-            <span class="special-span-paragraph-heading">Tech Frontier</span>
-            <span class="special-span-paragraph white-space">Highlight the latest and cutting-edges IT Technologies.</span>
-          </p>
+          <div id="para_0">
+            <h3>Tech Frontier</h3>
+            <p class="white-space">Highlight the latest and cutting-edges IT Technologies.</p>
+          </div>
         </div>
-          <p class="special-paragraph">
-            <span class="special-span-paragraph-heading"> Digital Mastery </span>
-            <span class="special-span-paragraph white-space">Covers essential skills, strategies, and toools for 
-company transformation.</span>
+          <div class="special-paragraph">
+            <h3> Digital Mastery </h3>
+            <p class="white-space">Covers essential skills, strategies, and toools for company transformation.</p>
+          </div>
+          <div class="special-paragraph">
+           <h3>Creative Dynamo</h3>
+           <p class="white-space">Focuses on fostering creativity and innovation related to product development or problem-solving internal to the IT-company.</p>
+           </div>
+           <div class="special-paragraph">
+            <h3>Business Visionaries</h3>
+          <p class="white-space">Focuses on strategic planning, leadership, and vision-setting in IT.</p>
+           </div>
+          <div class="special-paragraph">
+            <h3>HR program</h3>
+          <p class="white-space">Focuses on recruitment, talent development and employee engagement within the IT sector.</p>
+          </div>
+          
+          <div class="special-paragraph">
+          <h3>Commerce Vanguard</h3>
+          <p class="white-space">Covers e-commerce, business transactions, and market postioning in IT Industry.</p>
+          </div>
+          <div class="special-paragraph">
+          <h3>Finance Enclave</h3>
+          <p class="white-space">Focuses on financial management and planning overing budgeting, investments, and strategies within IT.</p>
+          </div>
+          <div class="special-paragraph">
+          <h3>Marketing Evolve</h3>
+          <p class="white-space">Focuses on digital marketing and brand development with up-to-date marketing strategies.</p>
+          </div> 
+          <div class="special-paragraph">
+           <h3>AI odyssey</h3>
+          <p class="white-space">Explores AI based applications, It' develpment,and integration in IT companies.
           </p>
-          <p class="special-paragraph">
-           <span class="special-span-paragraph-heading">Creative Dynamo</span>
-           <span class="special-span-paragraph white-space">Focuses on fostering creativity and innovation 
-related to product development or problem-solving
-internal to the IT-company.</span>
-          </p>
-          <p class="special-paragraph">
-          <span class="special-span-paragraph-heading">Business Visionaries</span>
-          <span class="special-span-paragraph white-space">Focuses on strategic planning, leadership, and
-vision-setting in IT.</span>
-          </p> 
-          <p class="special-paragraph">
-          <span class="special-span-paragraph-heading">HR program</span>
-          <span class="special-span-paragraph white-space">Focuses on recruitment, talent development and
-employee engagement within the IT sector.</span>
-          </p>  
-          <p class="special-paragraph">
-          <span class="special-span-paragraph-heading">Commerce Vanguard</span>
-          <span class="special-span-paragraph white-space">Covers e-commerce, business transactions, and
-market postioning in IT Industry.</span>
-          </p>
-          <p class="special-paragraph">
-          <span class="special-span-paragraph-heading">Finance Enclave</span>
-          <span class="special-span-paragraph white-space">Focuses on financial management and planning
-covering budgeting, investments, and strategies 
-within IT.</span>
-          </p>
-          <p class="special-paragraph">
-          <span class="special-span-paragraph-heading">Marketing Evolve</span>
-          <span class="special-span-paragraph white-space">Focuses on digital marketing and brand 
-development with up-to-date marketing strategies.</span>
-          </p> 
-          <p class="special-paragraph">
-           <span class="special-span-paragraph-heading">AI odyssey</span>
-          <span class="special-span-paragraph white-space"></span>Explores AI based applications, It' develpment,and
-integration in IT companies.</span>
-        </p>
-      </div>
-  
+         </div>
+       </div>
     </div>
 </div>
 
@@ -309,9 +300,8 @@ integration in IT companies.</span>
                     <span class="fa fa-star checked"></span>
                 <div class="card">
                     <p>
-                        Eu rebum molestie per. No nostrud imperdiet abhorreant qui, hinc incorrupte vix ad. Vel id aliquip oblique. Primis feugait sit an, brute illud convenire duo ea. Graece tempor eripuit sed in.
-                    </p>
-                    <span>Elise</span>
+                      Collaboration involves individuals working together, combining their skills and efforts to achieve common goals.                    </p>
+                    <span>sam</span>
                 </div>
             </div>
             <div class="item">
@@ -323,8 +313,7 @@ integration in IT companies.</span>
                     <span class="fa fa-star checked"></span>
                 <div class="card">
                     <p>
-                        Vitae pericula maluisset ut mei, pro eleifend gubergren eu. Et his brute graeci. Affert ponderum ei vel, dolorum accumsan ea has. Sea oblique salutatus ei, simul lucilius pri et. Errem melius temporibus ut eos
-                    </p>
+                      Communication ensures the exchange of ideas, feedback, and information among team members, promoting understanding and unity.                    </p>
                     <span>John</span>
                 </div>
             </div>
@@ -337,15 +326,40 @@ integration in IT companies.</span>
                     <span class="fa fa-star checked"></span>
                 <div class="card">
                     <p>
-                        Ne est virtute indoctum, quaeque vituperata cum ut. Te nisl quaeque pri. Vix ex autem latine, mel ne nobis scaevola, ei est dolor utinam commune. Pri unum doctus in, cu primis pertinax eos.
-                    </p>
-                    <span>Imani</span>
+                      Communication ensures the exchange of ideas, feedback, and information among team members, promoting understanding and unity.                    </p>
+                    <span>chris</span>
                 </div>
              </div>
         </div>
         <span class="btn prev">&lt;</span>
         <span class="btn next">&gt;</span>
     </div>
+    <script>
+      const testimonials = document.querySelector('.testimonials');
+      const scroller = testimonials.querySelector('.scroller');
+      const nextBtn = testimonials.querySelector('.btn.next');
+      const prevBtn = testimonials.querySelector('.btn.prev');
+      const itemWidth = testimonials.querySelector('.item').clientWidth;
+
+      nextBtn.addEventListener('click', scrollToNextItem);
+      prevBtn.addEventListener('click', scrollToPrevItem);
+
+      function scrollToNextItem() {
+          if(scroller.scrollLeft < (scroller.scrollWidth - itemWidth))
+              scroller.scrollBy({left: itemWidth, top: 0, behavior:'smooth'});
+          else
+              
+              scroller.scrollTo({left: 0, top: 0, behavior:'smooth'});
+      }
+      function scrollToPrevItem() {
+          if(scroller.scrollLeft != 0)
+              
+              scroller.scrollBy({left: -itemWidth, top: 0, behavior:'smooth'});
+          else
+             
+              scroller.scrollTo({left: scroller.scrollWidth, top: 0, behavior:'smooth'});
+      }
+  </script>
 <div class="footer">
   <div class="footer-container">
     <div class="footer-left">

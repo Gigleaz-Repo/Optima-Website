@@ -147,52 +147,63 @@ referrerpolicy="no-referrer"
       </p>
     </div>
     <div class="right-hero">
-      <div class="scrollable-div">
-        <div>
-          <div id="para_0">
-            <h3>Tech Frontier</h3>
-            <p class="white-space">Highlight the latest and cutting-edges IT Technologies.</p>
-          </div>
+      <div id="container">
+        <div class="custom-row custom-fixed-style"> 
+          <h3>Tech Frontier</h3>
+          <p>Highlight the latest and cutting-edges IT Technologies.</p>
         </div>
-          <div class="special-paragraph">
-            <h3> Digital Mastery </h3>
-            <p class="white-space">Covers essential skills, strategies, and toools for company transformation.</p>
-          </div>
-          <div class="special-paragraph">
-           <h3>Creative Dynamo</h3>
-           <p class="white-space">Focuses on fostering creativity and innovation related to product development or problem-solving internal to the IT-company.</p>
-           </div>
-           <div class="special-paragraph">
-            <h3>Business Visionaries</h3>
-          <p class="white-space">Focuses on strategic planning, leadership, and vision-setting in IT.</p>
-           </div>
-          <div class="special-paragraph">
-            <h3>HR program</h3>
-          <p class="white-space">Focuses on recruitment, talent development and employee engagement within the IT sector.</p>
-          </div>
-          
-          <div class="special-paragraph">
+        <div class="custom-row">
+          <h3> Digital Mastery </h3>
+          <p>Covers essential skills, strategies, and toools for company transformation.</p>
+        </div>
+        <div class="custom-row">
+          <h3>Creative Dynamo</h3>
+          <p>Focuses on fostering creativity and innovation related to product development or problem-solving internal to the IT-company.</p>
+        </div>
+        <div class="custom-row">
+          <h3>Business Visionaries</h3>
+          <p>Focuses on strategic planning, leadership, and vision-setting in IT.</p>
+        </div>
+        <div class="custom-row">
+          <h3>HR program</h3>
+          <p>Focuses on recruitment, talent development and employee engagement within the IT sector.</p>
+        </div>
+        <div class="custom-row">
           <h3>Commerce Vanguard</h3>
-          <p class="white-space">Covers e-commerce, business transactions, and market postioning in IT Industry.</p>
-          </div>
-          <div class="special-paragraph">
+          <p>Covers e-commerce, business transactions, and market postioning in IT Industry.</p>
+        </div>
+        <div class="custom-row">
           <h3>Finance Enclave</h3>
-          <p class="white-space">Focuses on financial management and planning overing budgeting, investments, and strategies within IT.</p>
-          </div>
-          <div class="special-paragraph">
+          <p>Focuses on financial management and planning overing budgeting, investments, and strategies within IT.</p>
+        </div>
+        <div class="custom-row">
           <h3>Marketing Evolve</h3>
-          <p class="white-space">Focuses on digital marketing and brand development with up-to-date marketing strategies.</p>
-          </div> 
-          <div class="special-paragraph">
-           <h3>AI odyssey</h3>
-          <p class="white-space">Explores AI based applications, It' develpment,and integration in IT companies.
-          </p>
-         </div>
-       </div>
+          <p>Focuses on digital marketing and brand development with up-to-date marketing strategies.</p>
+        </div> 
+        <div class="custom-row">
+          <h3>AI odyssey</h3>
+          <p >Explores AI based applications, It' develpment,and integration in IT companies.</p>
+        </div>
+      </div>
     </div>
 </div>
-
-
+<script>
+  const container = document.getElementById('container');
+  const rows = container.querySelectorAll('.custom-row');
+  
+  function updateStyles() {
+    const scrollTop = container.scrollTop;
+    const firstVisibleRowIndex = Math.floor(scrollTop / 100); 
+    
+    rows.forEach(row => row.classList.remove('custom-fixed-style'));
+    
+    if (firstVisibleRowIndex < rows.length) {
+      rows[firstVisibleRowIndex].classList.add('custom-fixed-style');
+    }
+  }
+  
+  container.addEventListener('scroll', updateStyles);
+</script>
 
 <h1 id="FAQ" class="text-center">FAQs <span class="question-style">?</span></h1>
 <div class="faq-container">

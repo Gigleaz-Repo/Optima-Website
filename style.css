@@ -412,7 +412,7 @@ input[type="radio"] {
 .checked {
   color: orange;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .item {
       padding: 0 30px;
   }
@@ -571,41 +571,39 @@ input[type="radio"] {
 
 
 
-.scrollable-div {
-  width:100%;  
-  height:50vh;    
-  border: 0px solid rgb(26, 119, 73); 
-  overflow: scroll;
-  
-  /* padding: 10px;   */
-   scrollbar-width:none;
-   overflow-x: hidden;
-   
+.custom-row {
+  height: 100px;
+  width: 100%;
+  transition: all 0.3s ease; 
+  padding-left: 10px;
+  margin-top: 5px;
+  border-left: 3px solid transparent; 
+  position: relative; 
+  color: gray;
 }
 
-.special-paragraph {
-  transition: color 0.3s ease;
-  color:gray;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 24px;
-  padding-left: 20px;
-  padding-right: 20px;
-  line-height: 2.5em;
-  overflow: visible;
-}
-
-.white-space{
-  text-align: justify;
-  
-}
-
-#para_0{
+.custom-fixed-style {
   color: rgba(40, 148, 118, 1);
-  border-left: 3px solid rgba(40, 148, 118, 1);
-            height: 80px;
-            padding-left: 20px;
-            left: 50%;
-            line-height: 2.5em;
+  border-left-color: rgba(40, 148, 118, 1); /* Change border color */
+}
+
+#container {
+  height: 380px; 
+  overflow-y: scroll; 
+  padding-right: 20px; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+  
+
+}
+.scroll-container{
+  display: flex;
+  flex-direction:row;
+  padding-top: 10px;
+
+}
+#container::-webkit-scrollbar {
+  width: 0; 
 }
 #row_0{
   color:  rgba(41, 48, 50, 1);
@@ -613,24 +611,15 @@ input[type="radio"] {
   padding-right: 10px;
   padding-left: 40px;
 }
-.text_scroll{
- padding-inline: 10px;
-}
-.scroll-container {
-  width:100%;
-  display:flex;
-  flex-direction: row;
-  padding-top: 25px;
-}
+
 @media screen and (max-width: 768px) {
-  #para_0{
-    /* Change the border-left to an underline */
+  .custom-fixed-style{
     border-left: none;
-    border-bottom: 4px solid rgba(40, 148, 118, 1);
-    padding-left: 16px; /* Reset padding */
-    width: 90%;
-    line-height: 1.8em;
-    margin-bottom: 20px;
+    border-bottom: 4px solid rgba(40, 148, 118, 1); 
+    width: 100%;
+    height: 100px;
+    line-height: 1.5em;
+    margin-bottom:10px;
   }
   #row_0{
     color:  rgba(41, 48, 50, 1);
@@ -640,23 +629,20 @@ input[type="radio"] {
 
   }
 
-.scroll-container  {
+  #container {
   width: 100%;
   color: #293032;
-  padding-left: 30px;
   flex-direction: column;
+  height: 40vh;
+  padding-left:10px;
   /* align-items: center; */
 }
-.special-paragraph {
+.custom-row{
   transition: color 0.3s ease;
   color:gray;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 24px;
-  line-height: 2.5em;
   overflow: visible;
-  width: 90%;
 }
-
 .csp{
   padding-top: 80px;
 }
@@ -671,17 +657,10 @@ input[type="radio"] {
    
 }
 .right-hero{
-  width: 50%;
+  width: 100%;
   
 }
-}
 
-
-
-
-/* Our Mission */
-
-@media screen and (max-width: 767px) {
   .mission-card {
     width: 125px;
     padding: 11px;
@@ -699,9 +678,12 @@ input[type="radio"] {
   .mission-container h1{
     font-size: 22px;
   }
-  .scrollable-div{
-    width: 350px;
+  .scroll-container{
+    width:100%;
     font-size: 12px;
+    display: flex;
+    flex-direction:column;
+
   }
 }
 

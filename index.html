@@ -18,6 +18,9 @@ referrerpolicy="no-referrer"
 
 </head>
 <body>
+  <div id="progress">
+    <span id="progress-value">&#x1F815;</span>
+  </div>
   <header class="header">
     <div class="logo">
      <a href="#home"><img src="Assests/Primary Logo OPTIMA 1.png" alt="Logo"></a>
@@ -126,7 +129,7 @@ referrerpolicy="no-referrer"
 
 
 
-<div class="content">
+<!-- <div class="content">
   <div class="image">
     <img src="Assests/green-image.png" >
     <div class="centered-text">
@@ -135,7 +138,7 @@ referrerpolicy="no-referrer"
     <div class="bottom-left-text">
       - Dr. Albert Eureka
     </div>
-  </div>
+  </div> -->
 </div>
 <div class="csp">
   <div class="scroll-container">
@@ -394,19 +397,30 @@ referrerpolicy="no-referrer"
       <li>Terms</li>
       <li>Review</li>
     </ul>
-    <ul>
-    <h4>Resources</h4>
-      <li>Blogs</li>
-      <li>About Us</li>
-      <li>Careers</li>
-      <li>Join Our discord</li>
-      <li>Privacy Policy</li>
-      <li>Terms</li>
-      <li>Review</li>
-    </ul>
   </div>
   </div>
-  
+  <script>
+    let calcScrollValue = () => {
+    let scrollProgress = document.getElementById("progress");
+    let progressValue = document.getElementById("progress-value");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+    if (pos > 100) {
+      scrollProgress.style.display = "grid";
+    } else {
+      scrollProgress.style.display = "none";
+    }
+    scrollProgress.addEventListener("click", () => {
+      document.documentElement.scrollTop = 0;
+    });
+    scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+  };
+  window.onscroll = calcScrollValue;
+  window.onload = calcScrollValue;
+  </script>
 </div>
 </body>
 </html>
